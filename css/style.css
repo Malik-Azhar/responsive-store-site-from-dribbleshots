@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root{
+  --clr-white: #fff;
+  --clr-black: rgba(0,0,0,0.7);
+  --clr-blue: #94b9ec;
+  --clr-pink: #E989CF;
+  --clr-gradient: linear-gradient(to right top, #bfd4f2, #bbc6f5, #c4b5f2, #d6a0e6, #e989cf);
+}
+
+header{
+  background-color: var(--clr-white);
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+}
+header .logo{
+  font-size: 2.8rem;
+  color: var(--clr-black);
+  font-weight: bold;
+}
+header .logo i{
+  color: var(--clr-blue);
+}
+header .navbar a{
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--clr-black);
+  margin-left: 6rem;
+  border-bottom: .0rem solid var(--clr-blue);
+}
+header .navbar a:hover{
+  color: var(--clr-blue);
+}
+header #menu-bar{
+  display: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: .1rem solid var(--clr-black);
+  border-radius: .3rem;
+  background-color: rgba(0,0,0,0.05);
+}
+.home{
+  position: relative;
+  margin: 8rem 2rem 0 2rem;
+  background: var(--clr-gradient);
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 2px 2px 10px var(--clr-blue);
+  height: 100%;
+}
+.home .content{
+  flex: 1 1 35rem;
+  margin: 10% 2%;
+}
+.home .content .sm-white-heading{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.home .content .lg-thin-heading{
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--clr-black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.home .content .lg-bold-heading{
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--clr-black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.home .content p{
+  font-size: 1.3rem;
+  color: var(--clr-black);
+  margin: 3rem 0;
+  line-height: 2;
+}
+.home .content .btn{
+  border: none;
+  outline: none;
+  background: var(--clr-white);
+  border-radius: 2rem;
+  padding: .8rem 3rem;
+  box-shadow: 6px 7px 4px var(--clr-blue);
+  /* font-size: 1.6rem; */
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--clr-blue);
+}
+.home .btn i{
+  margin-left: 1rem;
+}
+.home .image{
+  flex: 1 1 35rem;
+  text-align: center;
+  margin:  2%;
+}
+.home .image .image-slide{
+  height: 60%;
+  display: flex;
+  /* overflow: hidden; */
+}
+.home .image .image-slide .slide{
+  width: 100%;
+}
+
+.home .image .image-slide .slide img{
+  width: 100%;
+  height: 100%;
+  transition: all .4s ease-in;
+}
+.home .image .slider-btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 5%;
+  text-align: center;
+  height: auto;
+}
+.home .image .slider-btns .circle-btn{
+  width: 10px;
+  height: 10px;
+  padding: .5rem;
+  background-color: transparent;
+  border: .5rem solid var(--clr-white);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.home .image .slider-btns .circle-btn img{
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home .social-icon{
+  position: absolute;
+  bottom: 8%;
+  left: 3%;
+}
+.home .social-icon a{
+  font-size: 4rem;
+  color: var(--clr-blue);
+  margin-left: 2rem;
+}
+.home .social-icon a:hover{
+  color: #337feb;
+}
+
+
+@media (max-width: 991px) {
+  html{
+    font-size: 55%;
+  }
+  header{
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0%;
+    width: 100%;
+    padding: 1rem;
+    height: 100vh;
+    background-color: var(--clr-white);
+    border: .1rem solid rgba(0,0,0,0.05);
+  }
+  header .navbar.active{
+    display: initial;
+  }
+  header .navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 2rem;
+    border: .1rem solid rgba(0,0,0,0.05);
+  }
+  header .navbar a:hover{
+    background-color: var(--clr-blue);
+    color: var(--clr-black);
+  }
+  header #menu-bar{
+    display: initial;
+  }
+}
+@media (max-width: 450px) {
+  html{
+    font-size: 50%;
+  }
+  .home{
+    margin: 0;
+    padding: 8rem 4rem;
+    border-radius: none;
+  }
+  .home .content .sm-white-heading{
+    font-size: 1.7rem;
+  }
+  .home .content .lg-thin-heading{
+    font-size: 2.2rem;
+  }
+  .home .content .lg-bold-heading{
+    font-size: 4rem;
+  }
+}
