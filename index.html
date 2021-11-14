@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softileo</title>
+  <!-- custom style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- fontawe cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <header id="header">
+    <a href="#" class="logo"><i class="fas fa-store"></i> store</a>
+    <div class="fas fa-bars" id="menu-bar"></div>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">shop</a>
+      <a href="#">Contact</a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </header>
+
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3 class="sm-white-heading">outfit of the day</h3>
+      <h1 class="lg-thin-heading">All your</h1>
+      <h1 class="lg-bold-heading">Style are here</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium <br> tempora dolore doloribus corporis aliquid laborum! <br> Magni id recusandae sint earum!</p>
+      <button class="btn">buy now <i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="image">
+      <div class="image-slide">
+        <div class="slide">
+          <img src="images/blue-jacket.png">
+        </div>
+      </div>
+      <div class="slider-btns">
+        <div class="circle-btn" onclick="blueJacket()">
+          <img src="images/blue-jacket.png" height="80px" alt="">
+        </div>
+        <div class="circle-btn" onclick="blackJacket()">
+          <img src="images/black-jacket.png" height="80px" alt="">
+        </div>
+        <div class="circle-btn" onclick="pinkJacket()">
+          <img src="images/pink-jacket.png" height="80px" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="social-icon">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+<!-- custom js file -->
+  <script src="js/script.js"></script>
+  <script>
+    function blueJacket(){
+      const x =  document.querySelector(".slide img");
+      x.src = "../images/blue-jacket.png";
+      x.classList.add("fade");
+    }
+    function blackJacket(){
+      const x =  document.querySelector(".slide img");
+      x.src = "../images/black-jacket.png";
+      x.classList.add("fade");
+    }
+    function pinkJacket(){
+      const x =  document.querySelector(".slide img");
+      x.src = "../images/pink-jacket.png";
+      x.classList.add("fade");
+    }
+  </script>
+</body>
+</html>
